@@ -5,48 +5,71 @@ class Form extends React.Component {
     return (
       <div>
         <form>
-          <label htmlFor="name">
+          <label htmlFor="input-text">
             Nome
-            <input data-testid="name-input" type="text" id="name" name="name" />
+            <input type="text" data-testid="name-input" id="input-text" name="name" />
           </label>
-          <label htmlFor="description">
+          <label htmlFor="input-description">
             Descrição
-            <textarea data-testid="description-input" name="description" />
+            <textarea
+              data-testid="description-input"
+              id="input-description"
+              name="description"
+            />
           </label>
-          <label htmlFor="number">
+          <label htmlFor="input-number1">
             Attr01
-            <input type="number" data-testid="attr1-input" name="number" />
+            <input
+              type="number"
+              data-testid="attr1-input"
+              id="input-number1"
+              name="atributo1"
+            />
           </label>
-          <label htmlFor="number">
+          <label htmlFor="input-number2">
             Attr02
-            <input type="number" data-testid="attr2-input" name="number" />
+            <input
+              type="number"
+              data-testid="attr2-input"
+              id="input-number2"
+              name="atributo2"
+            />
           </label>
-          <label htmlFor="number">
+          <label htmlFor="input-number3">
             Attr03
-            <input type="number" data-testid="attr3-input" name="number" />
+            <input
+              type="number"
+              data-testid="attr3-input"
+              id="input-number3"
+              name="atributo3"
+            />
           </label>
-          <label htmlFor="image">
+          <label htmlFor="input-image">
             Imagem
-            <input data-testid="image-input" type="text" id="image" name="image" />
+            <input type="text" data-testid="image-input" id="input-image" name="image" />
           </label>
-          <label htmlFor="text">
+          <label htmlFor="select-text">
             Raridade
-            <select data-testid="rare-input" type="placeholder" name="text">
+            <select
+              data-testid="rare-input"
+              id="select-text"
+              name="rarity"
+            >
               <option value="normal">Normal</option>
               <option value="raro">Raro</option>
               <option value="muito raro">Muito Raro</option>
             </select>
           </label>
-          <label htmlFor="checkbox">
+          <label htmlFor="input-checkbox">
             Super Trybe Trunfo
             <input
-              data-testid="trunfo-input"
               type="checkbox"
-              id="checkbox"
-              name="checkbox"
+              data-testid="trunfo-input"
+              id="input-checkbox"
+              name="trunfo"
             />
           </label>
-          <button data-testid="save-button" type="button">Salvar</button>
+          <button type="button" data-testid="save-button">Salvar</button>
         </form>
       </div>
     );
