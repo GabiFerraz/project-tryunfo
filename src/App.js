@@ -23,6 +23,34 @@ class App extends React.Component {
   handleChange = ({ target: { name, value, type, checked } }) => {
     this.setState({
       [name]: type === 'checkbox' ? checked : value,
+    }, () => {
+      const {
+        cardName,
+        cardDescription,
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        cardImage,
+        cardRare } = this.state;
+      const valueNumer = 210;
+      const attributeValue = Number(cardAttr1)
+        + Number(cardAttr2)
+        + Number(cardAttr3) <= valueNumer;
+      const numberValue = 90;
+      const valueAttributes = (Number(cardAttr1) <= numberValue)
+      && (Number(cardAttr2) <= numberValue) && (Number(cardAttr3) <= numberValue);
+      const valueNeg = (cardAttr1 >= 0) && (cardAttr2 >= 0) && (cardAttr3 >= 0);
+      if (cardName
+        && cardDescription
+        && cardImage && cardRare && attributeValue && valueAttributes && valueNeg) {
+        this.setState({
+          isSaveButtonDisabled: false,
+        });
+      } else {
+        this.setState({
+          isSaveButtonDisabled: true,
+        });
+      }
     });
   }
 
