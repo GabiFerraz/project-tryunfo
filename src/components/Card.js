@@ -2,24 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
-  // constructor() {
-  //   super();
-
-  //   this.state = {
-  //     cardTrunfo: false,
-  //   };
-
-  //   this.superTrunfo = this.superTrunfo.bind(this);
-  // }
-
-  // superTrunfo(event) {
-  //   const { name } = event.target;
-  //   const value = (event.target === true) ? 'Super Trunfo' : '';
-  //   this.setState({
-  //     [name]: value,
-  //   });
-  // }
-
   render() {
     const {
       cardName,
