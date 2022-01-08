@@ -140,3 +140,5 @@ Form.propTypes = { cardName: PropTypes.string.isRequired,
 export default Form;
 
 // https://pt-br.reactjs.org/docs/forms.html
+// requisito 1: criei o formulário, colocando dentro do return do render as tags html com suas especificações de tipo, id, name e o atributo datatestid. Para funcionar eu exportei ele e importei no App.js que é o componente principal, o pai.
+// requisito 2: dentro do render, antes do return, eu adicionei as props necessárias ao componente de formulário e utilizei elas conforme pedido no requisito através da propriedade value que recebia uma prop específica e outra prop onChange que recebia o valor de outra prop específica. Importei as proptypes no início do arquivo e no final, eu especifiquei elas dizendo o que elas eram, nesse caso, strings, booleanos e funções.

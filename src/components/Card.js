@@ -23,6 +23,7 @@ class Card extends React.Component {
         <p data-testid="attr3-card">{cardAttr3}</p>
         <p data-testid="rare-card">{cardRare}</p>
         {cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>}
+        {/* se a prop cardTrunfo for verdadeira, a tag P com o texto Super trunfo vai aparecer, se a prop for falsa a tag não vai aparecer. É uma forma reduzida de verificação. Uso dessa forma pq eu não quero uma string vazia, eu quero que a tag apareça ou não. */}
       </>
     );
   }
@@ -38,3 +39,5 @@ Card.propTypes = { cardName: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired };
 
 export default Card;
+
+// requisito 3: criei o component Card, recebendo algumas props e passando elas nas tags html. Importei o proptypes e especifiquei quais eram os tipos da props. Para completar, eu exportei o componente e importei lá no app.js para poder funcionar.
