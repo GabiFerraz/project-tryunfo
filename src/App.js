@@ -65,6 +65,7 @@ class App extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      hasTrunfo,
       newCards } = this.state;
 
     this.setState({
@@ -85,7 +86,8 @@ class App extends React.Component {
       cardImage: '',
       cardRare: '',
       cardTrunfo: false,
-      // hasTrunfo: false,
+      hasTrunfo: cardTrunfo || hasTrunfo,
+      // se o cardTrunfo ou o hasTrunfo for verdadeiro, ele vai ser verdadeiro e não modifica mais.
     });
   }
 
