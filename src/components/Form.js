@@ -19,8 +19,8 @@ class Form extends React.Component {
 
     return (
       <div>
-        <form>
-          <label htmlFor="input-text">
+        <form className="form">
+          <label htmlFor="input-text" className="name">
             Nome
             <input
               type="text"
@@ -31,7 +31,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="input-description">
+          <label htmlFor="input-description" className="description">
             Descrição
             <textarea
               data-testid="description-input"
@@ -41,7 +41,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="input-number1">
+          <label htmlFor="input-number1" className="attr01">
             Attr01
             <input
               type="number"
@@ -52,7 +52,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="input-number2">
+          <label htmlFor="input-number2" className="attr02">
             Attr02
             <input
               type="number"
@@ -63,7 +63,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="input-number3">
+          <label htmlFor="input-number3" className="attr03">
             Attr03
             <input
               type="number"
@@ -74,7 +74,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="input-image">
+          <label htmlFor="input-image" className="image">
             Imagem
             <input
               type="text"
@@ -85,7 +85,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="select-text">
+          <label htmlFor="select-text" className="rare">
             Raridade
             <select
               data-testid="rare-input"
@@ -102,7 +102,7 @@ class Form extends React.Component {
           {hasTrunfo
             ? <p>Você já tem um Super Trunfo em seu baralho</p>
             : (
-              <label htmlFor="input-checkbox">
+              <label htmlFor="input-checkbox" className="trunfo">
                 Super Trybe Trunfo
                 <input
                   type="checkbox"
@@ -114,6 +114,7 @@ class Form extends React.Component {
                 />
               </label>) }
           <button
+            className="button"
             type="button"
             data-testid="save-button"
             disabled={ isSaveButtonDisabled }
@@ -127,18 +128,18 @@ class Form extends React.Component {
   }
 }
 
-Form.propTypes = { cardName: PropTypes.string.isRequired,
-  cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
-  cardImage: PropTypes.string.isRequired,
-  cardRare: PropTypes.string.isRequired,
-  cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.bool.isRequired,
-  onInputChange: PropTypes.func.isRequired,
-  onSaveButtonClick: PropTypes.func.isRequired };
+Form.propTypes = { cardName: PropTypes.string,
+  cardDescription: PropTypes.string,
+  cardAttr1: PropTypes.string,
+  cardAttr2: PropTypes.string,
+  cardAttr3: PropTypes.string,
+  cardImage: PropTypes.string,
+  cardRare: PropTypes.string,
+  cardTrunfo: PropTypes.bool,
+  hasTrunfo: PropTypes.bool,
+  isSaveButtonDisabled: PropTypes.bool,
+  onInputChange: PropTypes.func,
+  onSaveButtonClick: PropTypes.func }.isRequired;
 
 export default Form;
 

@@ -1,13 +1,263 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: 'Roboto' , -apple-system , BlinkMacSystemFont , 'Segoe UI' , 'Oxygen' , 'Ubuntu' , 'Cantarell' , 'Fira Sans' , 'Droid Sans' , 'Helvetica Neue' , sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro , Menlo , Monaco , Consolas , 'Courier New' , monospace;
+}
+
+.dadSectionsCards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 15px;
+  text-align: center;
+}
+
+h2 {
+  color: #444955;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: bold;
+  height: 36px;
+  left: 131px;
+  line-height: 29px;
+  text-align: center;
+  top: 122px;
+  width: 355px;
+}
+
+.visualizationH2 {
+  margin-bottom: 20px;
+}
+
+form {
+  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+}
+
+label {
+  color: #3d495c;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#input-text, #input-description, #select-text {
+  border: none;
+  border-bottom: 1px solid #333;
+  height: 30px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.attr01, .attr02, .attr03 {
+  flex-direction: row;
+  gap: 10px;
+}
+
+#input-number1, #input-number2, #input-number3 {
+  border: 1px solid #29313d;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 27px;
+  width: 250px;
+}
+
+.image {
+  flex-direction: row;
+  gap: 10px;
+}
+
+#input-image {
+  border: 1px solid #023031;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 27px;
+  width: 230px;
+}
+
+select {
+  background-color: white;
+}
+
+.trunfo {
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 5px;
+  justify-content: flex-end;
+}
+
+.button, .button-delete {
+  background: #003be5;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 7px 15px;
+}
+
+.button:hover, .button-delete:hover {
+  background-color: rgba(0, 0, 255, 0.65);
+}
+
+.button:disabled, .button-delete:disabled {
+  opacity: 0.6;
+}
+
+.rare {
+  color: #333;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  letter-spacing: 4px;
+}
+
+.dadVisualization {
+  background-color: white;
+  border-radius: 5px;
+  display: grid;
+  height: fit-content;
+  padding: 10px;
+  place-items: center;
+  position: relative;
+  width: 370px;
+}
+
+.greenBorder {
+  background-color: #036b52;
+  border-radius: 5px;
+  height: 450px;
+  justify-content: stretch;
+  padding: 10px;
+  position: relative;
+  width: 350px;
+}
+
+.cardTitle {
+  background-color: #023031;
+  border-radius: 5px 5px 0 0;
+  color: white;
+  padding: 20px 10px;
+  text-align: left;
+}
+
+.imgCard {
+  height: 200px;
+  position: relative;
+  width: 100%;
+}
+
+.imgCard img {
+  height: 100%;
+  width: 100%;
+}
+
+.greenTriangle {
+  border-color: transparent #036b52 #036b52 transparent;
+  border-style: solid;
+  border-width: 0 0 40px 330px;
+  bottom: 0;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.whiteTriangle {
+  border-color: transparent white white transparent;
+  border-style: solid;
+  border-width: 0 0 40px 330px;
+  height: 40px;
+  width: 100%;
+}
+
+.descriptionP {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 270px;
+  transform: rotate(-7deg);
+}
+
+.descriptionP p {
+  background-color: #036b52;
+  font-size: 15px;
+}
+
+.attrs {
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 130px;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.superTrunfo {
+  align-items: center;
+  background-color: #036b52;
+  border: 5px solid black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 800;
+  height: 80px;
+  line-height: 1.2rem;
+  padding: 10px;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  top: 35%;
+  transform: rotate(-10deg);
+  width: 80px;
+}
+
+.cardRare {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.granpaCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+
+.dadCard {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
